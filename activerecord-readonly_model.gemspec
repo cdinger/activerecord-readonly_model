@@ -2,10 +2,10 @@
 require File.expand_path('../lib/active_record-readonly_model/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["TODO: Write your name"]
+  gem.authors       = ["Christian Dinger"]
   gem.email         = ["cdinger@gmail.com"]
   gem.description   = %q{Makes an ActiveRecord model read-only}
-  gem.summary       = %q{Makes an ActiveRecord model read-only for use with legacy data, static data, or environments in which you don't have control over database permissions.}
+  gem.summary       = %q{Makes an ActiveRecord model read-only}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
