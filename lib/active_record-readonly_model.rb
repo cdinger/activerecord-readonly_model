@@ -1,4 +1,5 @@
-require "active_record-readonly_model/version"
+require 'active_record'
+require 'active_record-readonly_model/version'
 
 module ActiveRecord
   module ReadonlyModel
