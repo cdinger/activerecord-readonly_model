@@ -3,7 +3,7 @@ require 'active_record-readonly_model/version'
 
 module ActiveRecord
   module ReadonlyModel
-    @@bypass_flag = true
+    @@bypass_flag = false
 
     def self.bypass(&block)
       @@bypass_flag = true
