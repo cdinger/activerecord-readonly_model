@@ -24,14 +24,6 @@ class TestReadonly < Test::Unit::TestCase
       assert_equal(before_count, StaticThing.count)
     end
 
-    #should "prevent delete" do
-      #before_count = StaticThing.count
-      #assert_raise ActiveRecord::ReadOnlyRecord do
-        #StaticThing.delete_all
-      #end
-      #assert_equal(before_count, StaticThing.count)
-    #end
-
     should "prevent update" do
       thing = StaticThing.first
       thing.name = 'something different'

@@ -27,13 +27,14 @@ class TestReadonly < Test::Unit::TestCase
       assert_not_equal(before_count, StaticThing.count)
     end
 
-    #should "allow delete in an ignore_readonly block" do
-      #before_count = StaticThing.count
-      #assert_nothing_raised do
+    should "allow delete in an ignore_readonly block" do
+      before_count = StaticThing.count
+      assert_nothing_raised do
         #StaticThing.ignore_readonly { StaticThing.delete_all }
-      #end
-      #assert_not_equal(before_count, StaticThing.count)
-    #end
+        ActiveRecord::ReadonlyModel.bypass { StaticThing.delete_all }
+      end
+      assert_not_equal(before_count, StaticThing.count)
+    end
 
     should "allow update in an ignore_readonly block" do
       assert_nothing_raised do
